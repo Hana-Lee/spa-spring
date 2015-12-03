@@ -16,8 +16,11 @@
 		<spring-security.version>4.0.3.RELEASE</spring-security.version>
 		<modelmapper.version>0.7.5</modelmapper.version>
 		<lombok.version>1.16.6</lombok.version>
+
 		<bootstrap.version>3.3.5</bootstrap.version>
 		<react.version>0.13.3</react.version>
+		<sockjs.version>1.0.2</sockjs.version>
+		<stomp-websocket.version>2.3.3</stomp-websocket.version>
 	</properties>
 
 	<parent>
@@ -64,6 +67,18 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-messaging</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
@@ -91,6 +106,16 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>${bootstrap.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>sockjs-client</artifactId>
+			<version>${sockjs.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>stomp-websocket</artifactId>
+			<version>${stomp-websocket.version}</version>
 		</dependency>
 
 		<dependency>

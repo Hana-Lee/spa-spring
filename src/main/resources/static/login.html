@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+  app.html
+  app browser document
+-->
+
+<html>
+<head>
+<!-- ie9+ rendering support for latest standards -->
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>App Login</title>
+
+<!-- third-party stylesheets -->
+
+<!-- our stylesheets -->
+<link rel="stylesheet" href="css/app.login.css" type="text/css" />
+
+<script src="js/vendor/sockjs-0.3.4.js"></script>
+<script src="js/vendor/stomp.js"></script>
+
+<!-- our javascript -->
+<script src="js/app.login.js"></script>
+<script>
+	//        $(function () {
+	//            app.initModule($('#app'));
+	//        });
+</script>
+
+</head>
+<body>
+	<h2>로그인</h2>
+	<form method="post" action="/app/j_spring_security_check">
+		<table>
+			<tr height="40px">
+				<td>유저ID</td>
+				<td><input type="text" name="j_username"></td>
+			</tr>
+			<tr height="40px">
+				<td>패스워드</td>
+				<td><input type="password" name="j_password"></td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td align="center"><input type="submit" value="로그인"></td>
+				<td align="center"><input type="reset" value="리셋"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
